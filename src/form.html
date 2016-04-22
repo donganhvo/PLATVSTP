@@ -50,6 +50,8 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <link href="../src/skins/all.css?v=1.0.2" rel="stylesheet">
+    <link href="../src/css/bootstrap-material-design.min.css" rel="stylesheet">
+    <link href="../src/css/ripples.min.css" rel="stylesheet">
     <style>
     #view-source {
       position: fixed;
@@ -66,7 +68,7 @@
     </style>
   </head>
   <body>
-    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
       <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title" id="headerTitle">Tổ Chức Bộ Máy</span>
@@ -90,7 +92,7 @@
           </ul>
         </div>
       </header>
-      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50" >
         <header class="demo-drawer-header">
           <img src="images/user.jpg" class="demo-avatar">
           <div class="demo-avatar-dropdown">
@@ -107,36 +109,51 @@
             </ul>
           </div>
         </header>
-        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-            <a class="mdl-navigation__link static" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i><span>YÊU CẦU CHUNG</span></a>
-            <a class="mdl-navigation__link" href="sub.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">class</i><span>TỔ CHỨC BỘ MÁY</span></a>
-            <a class="mdl-navigation__link static" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">event</i><span>KẾ HOẠCH ATVSLĐ</span></a>
-            <a class="mdl-navigation__link static" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report_problem</i><span>ĐÁNH GIÁ RỦI RO</span></a>
-            <a class="mdl-navigation__link static" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i><span>TỰ KIỂMTRA</span></a>
-            <a class="mdl-navigation__link static" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i><span>TUYÊN TRUYỀN - HUẤN LUYỆN</span></a>
-            <a class="mdl-navigation__link static" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">assignment_late</i><span>XỬ LÝ TÌNH HUỐNG KHẨN CẤP</span></a>
-            <a class="mdl-navigation__link static" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">subtitles</i><span>BÁO CÁO ĐỊNH KÌ</span></a>
-            <a class="mdl-navigation__link static" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i><span>HỒ SƠ QUẢN LÝ</span></a>
-          <div class="mdl-layout-spacer"></div>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
-        </nav>
+          <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+              <a class="mdl-navigation__link static" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i><span>YÊU CẦU CHUNG</span></a>
+              <a class="mdl-navigation__link" href="sub.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">class</i><span>TỔ CHỨC BỘ MÁY</span></a>
+              <a class="mdl-navigation__link static" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">event</i><span>KẾ HOẠCH ATVSLĐ</span></a>
+              <a class="mdl-navigation__link static" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report_problem</i><span>ĐÁNH GIÁ RỦI RO</span></a>
+              <a class="mdl-navigation__link static" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i><span>TỰ KIỂMTRA</span></a>
+              <a class="mdl-navigation__link static" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i><span>TUYÊN TRUYỀN - HUẤN LUYỆN</span></a>
+              <a class="mdl-navigation__link static" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">assignment_late</i><span>XỬ LÝ TÌNH HUỐNG KHẨN CẤP</span></a>
+              <a class="mdl-navigation__link static" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">subtitles</i><span>BÁO CÁO ĐỊNH KÌ</span></a>
+              <a class="mdl-navigation__link static" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i><span>HỒ SƠ QUẢN LÝ</span></a>
+              <div class="mdl-layout-spacer"></div>
+          </nav>
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
-            <ul>
-                <li class="parent-ul">
-                    <a data-toggle="collapse" data-target="#anvs-ld">Tổ chức Bộ phận An toàn - vệ sinh lao động</a>
-                    <div id="anvs-ld" class="collapse">
-                        <div>A2.2.1: Cơ sở có bố trí người/bộ phận làm công tác ATVSLĐ hay không?</div>
-                        <ul>
-                            <li><label><div class="icheckbox">yes <input type="radio" name="a1" /></div></label></li>
-                            <li><label><div class="icheckbox">Improve <input type="radio" name="a1"/></div></label></li>
-                            <li><label><div class="icheckbox">No <input type="radio" name="a1"/></div></label></li>
-                        </ul>
+            <form>
+                <div class="form-group">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="companyName">
+                        <label class="mdl-textfield__label" for="companyName">Tên công ty</label>
                     </div>
-                </li>
-            </ul>
+                </div>
 
+                <div class="form-group">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <textarea class="mdl-textfield__input" type="text" rows= "3" id="address" ></textarea>
+                        <label class="mdl-textfield__label" for="address">Địa chỉ</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="s1">Your favorite pastry</label>
+                    <select id="s1" class="form-control">
+                        <option value="Apple fritter">Apple fritter</option>
+                        <option value="Croissant">Croissant</option>
+                        <option value="Donut">Donut</option>
+                        <option value="Financier">Financier</option>
+                        <option value="Jello">Jello</option>
+                        <option value="Madeleine">Madeleine</option>
+                        <option value="Pound cake">Pound cake</option>
+                        <option value="Pretzel">Pretzel</option>
+                        <option value="Sfogliatelle">Sfogliatelle</option>
+                    </select>
+                </div>
+            </form>
         </div>
       </main>
     </div>  
@@ -144,8 +161,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="../src/js/icheck.min.js"></script>
+    <script src="../src/js/material.min.js"></script>
+    <script src="../src/js/ripples.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
+            $.material.init()
             $('input').iCheck({
                 checkboxClass: 'icheckbox_square',
                 radioClass: 'iradio_square'
