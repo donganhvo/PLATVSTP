@@ -140,19 +140,54 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="s1">Your favorite pastry</label>
+                    <label for="s1">Tỉnh/Thành Phố</label>
                     <select id="s1" class="form-control">
-                        <option value="Apple fritter">Apple fritter</option>
-                        <option value="Croissant">Croissant</option>
-                        <option value="Donut">Donut</option>
-                        <option value="Financier">Financier</option>
-                        <option value="Jello">Jello</option>
-                        <option value="Madeleine">Madeleine</option>
-                        <option value="Pound cake">Pound cake</option>
-                        <option value="Pretzel">Pretzel</option>
-                        <option value="Sfogliatelle">Sfogliatelle</option>
+                        <option value="Bà Rịa-Vũng Tàu">Bà Rịa-Vũng Tàu</option>
+                        <option value="Hải Dương">Hải Dương</option>
+                        <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                        <option value="Hậu Giang">Hậu Giang</option>
+                        <option value="Hưng Yên">Hưng Yên</option>
+                        <option value="Khánh Hòa">Khánh Hòa</option>
+                        <option value="Kiên Giang">Kiên Giang</option>
+                        <option value="Kon Tum">Kon Tum</option>
+                        <option value="Lào Cai">Lào Cai</option>
                     </select>
                 </div>
+
+                <div class="form-group">
+                    <label for="s2">Loại hình doanh nghiệp</label>
+                    <select id="s2" class="form-control">
+                        <option value="TNHH">TNHH</option>
+                        <option value="CTCP">CTCP</option>
+                        <option value="CTHD">CTHD</option>
+                        <option value="DNTN">DNTN</option>
+                        <option value="DNNN">DNNN</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="s3">Ngành nghề</label>
+                    <select id="s3" class="form-control">
+                        <option value="Khai khoáng">Khai khoáng</option>
+                        <option value="SX hóa chất">SX hóa chất</option>
+                        <option value="SX kim loại, SP từ kim loại">SX kim loại, SP từ kim loại</option>
+                        <option value="SX khoáng phi kim loại">SX khoáng phi kim loại</option>
+                        <option value="Xây dựng">Xây dựng</option>
+                        <option value="Đóng, sửa chữa tàu biển">Đóng, sửa chữa tàu biển</option>
+                        <option value="Đóng, sửa chữa tàu biển">Đóng, sửa chữa tàu biển</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+                        <label class="mdl-textfield__label" for="sample4">Tổng số lao động</label>
+                        <span class="mdl-textfield__error">Xin vui lòng nhập số!</span>
+                    </div>
+                </div>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" id="submit">
+                   Đăng Ký
+                </button>
             </form>
         </div>
       </main>
@@ -175,6 +210,10 @@
                 event.preventDefault();
                 var title = $(this).find('span');
                 $('#headerTitle').text($(title).text());
+            });
+
+            $('#submit').click(function(){
+                window.location.replace('/PLATVSTP/src/form.html')
             });
         })
     </script>
