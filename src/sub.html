@@ -47,7 +47,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.cyan-light_blue.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link href="../src/skins/all.css?v=1.0.2" rel="stylesheet">
     <style>
     #view-source {
       position: fixed;
@@ -57,6 +59,9 @@
       margin-right: 40px;
       margin-bottom: 40px;
       z-index: 900;
+    }
+    .parent-ul{
+        list-style: none;
     }
     </style>
   </head>
@@ -118,15 +123,34 @@
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
-                  
-          
+            <ul>
+                <li class="parent-ul">
+                    <a data-toggle="collapse" data-target="#anvs-ld">Tổ chức Bộ phận An toàn - vệ sinh lao động</a>
+                    <div id="anvs-ld" class="collapse">
+                        <div>A2.2.1: Cơ sở có bố trí người/bộ phận làm công tác ATVSLĐ hay không?</div>
+                        <ul>
+                            <li><label><div class="icheckbox">yes <input type="radio" name="a1" /></div></label></li>
+                            <li><label><div class="icheckbox">Improve <input type="radio" name="a1"/></div></label></li>
+                            <li><label><div class="icheckbox">No <input type="radio" name="a1"/></div></label></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
         </div>
       </main>
     </div>  
     <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="../src/js/icheck.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_square',
+                radioClass: 'iradio_square'
+            });
+
             $('.mdl-navigation__link.static').click(function(event){
                 event.preventDefault();
                 var title = $(this).find('span');
